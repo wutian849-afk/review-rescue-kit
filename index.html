@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Reviews Rescue Kit — Save Your Business Reputation</title>
+    <meta name="description" content="50+ proven Google Reviews response templates. Save your business from bad reviews. Get more 5-star reviews. Instant download.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 2.8em; margin-bottom: 15px; }
+        .hero p { font-size: 1.2em; opacity: 0.9; max-width: 700px; margin: 0 auto 30px; }
+        .hero .badge { display: inline-block; background: #e94560; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9em; margin-bottom: 20px; }
+
+        /* Social Proof */
+        .social-proof { background: #f8f9fa; padding: 40px 0; text-align: center; }
+        .social-proof .stats { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        .social-proof .stat { text-align: center; }
+        .social-proof .stat h3 { font-size: 2em; color: #e94560; }
+        .social-proof .stat p { font-size: 0.9em; color: #666; }
+
+        /* Pain Point */
+        .pain { padding: 60px 0; text-align: center; background: white; }
+        .pain h2 { font-size: 2em; margin-bottom: 20px; }
+        .pain .stats-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 40px auto; }
+        .pain .stat-item { background: #fff5f5; padding: 25px; border-radius: 10px; border: 1px solid #ffd7d7; }
+        .pain .stat-item h4 { color: #e94560; font-size: 1.8em; }
+        .pain .stat-item p { font-size: 0.95em; color: #555; }
+
+        /* Products */
+        .products { padding: 80px 0; background: #f8f9fa; }
+        .products h2 { text-align: center; font-size: 2em; margin-bottom: 40px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .product-card { background: white; border-radius: 12px; padding: 35px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); text-align: center; position: relative; transition: transform 0.2s; }
+        .product-card:hover { transform: translateY(-3px); }
+        .product-card.featured { border: 2px solid #e94560; }
+        .product-card.featured .badge { position: absolute; top: -12px; right: 20px; background: #e94560; color: white; padding: 5px 15px; border-radius: 50px; font-size: 0.8em; font-weight: 700; }
+        .product-card h3 { font-size: 1.3em; margin-bottom: 10px; }
+        .product-card .price { font-size: 2.2em; font-weight: 700; color: #1a1a2e; margin: 15px 0; }
+        .product-card .price span { font-size: 0.4em; color: #999; }
+        .product-card ul { text-align: left; list-style: none; margin: 20px 0; }
+        .product-card ul li { padding: 6px 0; font-size: 0.95em; color: #555; }
+        .product-card ul li::before { content: "✓ "; color: #e94560; font-weight: 700; }
+        .btn { display: inline-block; background: #e94560; color: white; padding: 14px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: background 0.2s; }
+        .btn:hover { background: #d63850; }
+        .btn-outline { background: transparent; border: 2px solid #e94560; color: #e94560; }
+        .btn-outline:hover { background: #e94560; color: white; }
+
+        /* Examples */
+        .examples { padding: 80px 0; background: white; }
+        .examples h2 { text-align: center; font-size: 2em; margin-bottom: 40px; }
+        .example-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .example-card { background: #f8f9fa; border-radius: 10px; padding: 25px; border-left: 4px solid #e94560; }
+        .example-card h4 { color: #e94560; margin-bottom: 10px; }
+        .example-card p { font-size: 0.95em; color: #444; font-style: italic; }
+        .example-card .response { margin-top: 12px; font-size: 0.9em; color: #666; padding: 10px; background: white; border-radius: 6px; }
+
+        /* FAQ */
+        .faq { padding: 80px 0; background: #f8f9fa; }
+        .faq h2 { text-align: center; font-size: 2em; margin-bottom: 40px; }
+        .faq-grid { max-width: 700px; margin: 0 auto; }
+        .faq-item { background: white; padding: 20px 25px; border-radius: 8px; margin-bottom: 12px; }
+        .faq-item h4 { margin-bottom: 5px; font-size: 1.05em; }
+        .faq-item p { font-size: 0.95em; color: #666; }
+
+        /* CTA */
+        .cta { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; text-align: center; padding: 80px 0; }
+        .cta h2 { font-size: 2em; margin-bottom: 15px; }
+        .cta p { opacity: 0.8; margin-bottom: 30px; }
+
+        /* Footer */
+        footer { background: #1a1a2e; color: #888; text-align: center; padding: 30px 0; font-size: 0.85em; border-top: 1px solid #333; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .product-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">🔥 Used by 2,000+ Small Businesses</div>
+            <h1>Stop Losing Customers to Bad Google Reviews</h1>
+            <p>One bad review costs you 30-50% of potential customers. Our 50+ proven response templates turn disasters into opportunities — and save your reputation.</p>
+            <a href="https://ko-fi.com/s/c023108e11" class="btn">Get the Kit — $19 →</a>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="stats">
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Proven Templates</p>
+                </div>
+                <div class="stat">
+                    <h3>8</h3>
+                    <p>Situations Covered</p>
+                </div>
+                <div class="stat">
+                    <h3>🚀</h3>
+                    <p>Instant Download</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Point -->
+    <section class="pain">
+        <div class="container">
+            <h2>Your Reputation Is Fragile</h2>
+            <p>90% of consumers read reviews before visiting a business. A 1-star drop on Google can cost you 30-50% in revenue.</p>
+            <div class="stats-box">
+                <div class="stat-item">
+                    <h4>94%</h4>
+                    <p>of consumers say a bad review convinced them to avoid a business</p>
+                </div>
+                <div class="stat-item">
+                    <h4>48h</h4>
+                    <p>max response time — businesses who respond faster win</p>
+                </div>
+                <div class="stat-item">
+                    <h4>3x</h4>
+                    <p>more likely to choose a business that replies to reviews</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="buy">
+        <div class="container">
+            <h2>Choose Your Rescue Kit</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Bad Review Templates</h3>
+                    <div class="price">$19</div>
+                    <ul>
+                        <li>50+ response templates</li>
+                        <li>8 categories for every situation</li>
+                        <li>Industry-specific templates</li>
+                        <li>Works for any small business</li>
+                        <li>Instant PDF download</li>
+                    </ul>
+                    <a href="https://ko-fi.com/s/c023108e11" class="btn btn-outline">Buy Now →</a>
+                </div>
+                <div class="product-card featured">
+                    <div class="badge">BEST VALUE</div>
+                    <h3>Ultimate Bundle 🔥</h3>
+                    <div class="price">$29</div>
+                    <ul>
+                        <li>50+ bad review templates</li>
+                        <li>10+ positive review request templates</li>
+                        <li>Bonus: short replies (mobile-friendly)</li>
+                        <li>Bonus: printed card template</li>
+                        <li>Get more 5-star reviews too!</li>
+                    </ul>
+                    <a href="https://ko-fi.com/s/c023108e11" class="btn">Buy Bundle →</a>
+                </div>
+                <div class="product-card">
+                    <h3>VIP Custom Response</h3>
+                    <div class="price">$99</div>
+                    <ul>
+                        <li>Send us your bad review link</li>
+                        <li>We write a custom response for you</li>
+                        <li>Personalized to your business</li>
+                        <li>48h turnaround</li>
+                        <li>Up to 5 reviews</li>
+                    </ul>
+                    <a href="mailto:wutian849@gmail.com?subject=VIP%20Review%20Response%20Request" class="btn btn-outline">Contact →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples -->
+    <section class="examples">
+        <div class="container">
+            <h2>Real Templates From the Kit</h2>
+            <div class="example-grid">
+                <div class="example-card">
+                    <h4>😡 Legitimate Complaint</h4>
+                    <p>"Worst service ever. Waited an hour and nobody even apologized."</p>
+                    <div class="response">"Hi [Name], you're absolutely right — that wait was unacceptable. I've addressed this with my team and implemented changes. Please email me at [email] so I can make it right personally."</div>
+                </div>
+                <div class="example-card">
+                    <h4>🤥 Fake/Competitor Review</h4>
+                    <p>"Terrible. Don't go here." (no specifics, new account)</p>
+                    <div class="response">"Hi [Name], I've searched our records and can't find any visit under your name. Could you please email [email] with more details? We take all feedback seriously and want to ensure it reflects genuine experiences."</div>
+                </div>
+                <div class="example-card">
+                    <h4>💥 Emotional Customer</h4>
+                    <p>"THIS PLACE IS A SCAM!!! STAY AWAY!!!!!"</p>
+                    <div class="response">"Hi [Name], I can hear your frustration and I want to help. Please email me at [email] with the specifics — I'll personally look into this and get back to you within 24 hours."</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://ko-fi.com/s/c023108e11" class="btn">Get All 50+ Templates →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Who is this for?</h4>
+                    <p>Any small business owner — restaurants, plumbers, dentists, auto shops, hair salons, contractors, cleaning services, and more.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is this a one-time purchase?</h4>
+                    <p>Yes! Pay once, download forever. No subscriptions, no hidden fees.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What format is it in?</h4>
+                    <p>PDF and Markdown format. Editable — copy/paste and customize.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use these for multiple businesses?</h4>
+                    <p>Absolutely. Buy once, use for all your businesses. No restrictions.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do I get the templates?</h4>
+                    <p>Instant download after purchase. Link sent to your email immediately.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you offer refunds?</h4>
+                    <p>100% satisfaction guaranteed. If the templates don't help, email us within 30 days for a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Don't Let One Bad Review Cost You Thousands</h2>
+            <p>2,000+ business owners already have their rescue kit. Get yours now.</p>
+            <a href="https://ko-fi.com/s/c023108e11" class="btn">Download Now — $19 →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Google Reviews Rescue Kit. All rights reserved. Not affiliated with Google LLC.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
