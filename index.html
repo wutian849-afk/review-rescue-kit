@@ -3,369 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Rescue Kit — Protect Your Reputation</title>
-    <meta name="description" content="50+ proven response templates for Google, Yelp, Amazon reviews. Save your business from bad reviews. Instant download.">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Review Rescue Kit — Save Your Business Reputation</title>
+    <meta name="description" content="50+ proven response templates. Turn bad reviews into opportunities. Works on Google, Yelp, Amazon, Trustpilot.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --purple: #533afd;
-            --purple-hover: #4434d4;
-            --purple-light: #b9b9f9;
-            --navy: #061b31;
-            --slate: #64748d;
-            --border: #e5edf5;
-            --bg: #ffffff;
-            --dark: #1c1e54;
-            --ruby: #ea2261;
-            --magenta: #f96bee;
-            --green: #15be53;
+            --bg: #08090a;
+            --surface: #0f1011;
+            --card: #191a1b;
+            --border: rgba(255,255,255,0.08);
+            --border-subtle: rgba(255,255,255,0.05);
+            --text: #f7f8f8;
+            --text-secondary: #d0d6e0;
+            --text-tertiary: #8a8f98;
+            --text-muted: #62666d;
+            --brand: #5e6ad2;
+            --brand-hover: #7170ff;
+            --accent: #828fff;
+            --success: #10b981;
+            --success-bg: rgba(16,185,129,0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            font-weight: 300;
-            color: var(--navy);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-feature-settings: 'cv01', 'ss03';
             background: var(--bg);
+            color: var(--text);
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
         /* Navigation */
         nav {
             position: sticky; top: 0; z-index: 100;
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
+            background: rgba(8,9,10,0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
         }
         nav .container {
             display: flex; align-items: center; justify-content: space-between;
             padding-top: 16px; padding-bottom: 16px;
         }
         .logo {
-            font-size: 20px; font-weight: 400; color: var(--navy);
-            font-feature-settings: "ss01";
+            font-size: 18px; font-weight: 500; color: var(--text);
+            letter-spacing: -0.3px;
             display: flex; align-items: center; gap: 10px;
         }
         .logo-icon {
-            width: 32px; height: 32px; background: var(--purple);
-            border-radius: 6px; display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 14px; font-weight: 600;
+            width: 28px; height: 28px;
+            background: linear-gradient(135deg, #7170ff, #5e6ad2);
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; color: white;
         }
         .nav-links { display: flex; gap: 28px; align-items: center; }
         .nav-links a {
-            font-size: 14px; font-weight: 400; color: var(--navy);
-            text-decoration: none; font-feature-settings: "ss01";
-            transition: color 0.2s;
+            font-size: 14px; font-weight: 500; color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.15s;
         }
-        .nav-links a:hover { color: var(--purple); }
+        .nav-links a:hover { color: var(--text); }
         .nav-cta {
-            background: var(--purple); color: white !important;
-            padding: 8px 16px; border-radius: 4px;
-            transition: background 0.2s !important;
+            background: var(--brand); color: white !important;
+            padding: 8px 18px; border-radius: 6px;
+            transition: background 0.15s !important;
+            font-weight: 500 !important;
         }
-        .nav-cta:hover { background: var(--purple-hover) !important; }
+        .nav-cta:hover { background: var(--brand-hover) !important; }
 
         /* Hero */
         .hero {
             padding: 100px 0 80px;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
         .hero::before {
             content: '';
             position: absolute;
-            top: -200px; right: -200px;
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(234,34,97,0.06) 0%, rgba(249,107,238,0.04) 50%, transparent 70%);
-            border-radius: 50%;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -150px; left: -150px;
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(83,58,253,0.05) 0%, transparent 70%);
-            border-radius: 50%;
+            top: -300px; left: 50%; transform: translateX(-50%);
+            width: 800px; height: 600px;
+            background: radial-gradient(ellipse, rgba(94,106,210,0.08) 0%, transparent 70%);
+            pointer-events: none;
         }
         .hero-badge {
-            display: inline-block;
-            background: rgba(21,190,83,0.15);
-            color: #108c3d;
-            font-size: 11px; font-weight: 400;
-            padding: 4px 10px; border-radius: 4px;
-            border: 1px solid rgba(21,190,83,0.3);
-            margin-bottom: 24px;
-            font-feature-settings: "ss01";
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            padding: 6px 14px;
+            font-size: 13px; font-weight: 500; color: var(--text-tertiary);
+            margin-bottom: 32px;
+        }
+        .hero-badge-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--success);
         }
         .hero h1 {
-            font-size: 48px; font-weight: 300; line-height: 1.15;
-            letter-spacing: -0.96px;
-            color: var(--navy);
-            font-feature-settings: "ss01";
+            font-size: 64px; font-weight: 500;
+            letter-spacing: -1.408px;
+            line-height: 1;
+            color: var(--text);
             max-width: 800px; margin: 0 auto 20px;
             position: relative;
         }
+        .hero .highlight {
+            background: linear-gradient(135deg, #7170ff, #5e6ad2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         .hero p {
-            font-size: 18px; font-weight: 300; line-height: 1.4;
-            color: var(--slate);
-            font-feature-settings: "ss01";
-            max-width: 650px; margin: 0 auto 36px;
+            font-size: 18px; font-weight: 400; line-height: 1.6;
+            color: var(--text-tertiary);
+            max-width: 600px; margin: 0 auto 36px;
             position: relative;
         }
-        .hero-actions { display: flex; gap: 12px; justify-content: center; position: relative; }
+        .hero-actions {
+            display: flex; gap: 12px; justify-content: center;
+            position: relative;
+        }
         .btn {
             display: inline-flex; align-items: center; gap: 6px;
-            font-family: 'Source Sans 3', system-ui, sans-serif;
-            font-size: 16px; font-weight: 400; line-height: 1;
-            padding: 10px 20px; border-radius: 4px;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 15px; font-weight: 500;
+            padding: 10px 22px; border-radius: 6px;
             text-decoration: none; cursor: pointer;
-            font-feature-settings: "ss01";
-            transition: all 0.2s;
-            border: none;
+            transition: all 0.15s;
         }
         .btn-primary {
-            background: var(--purple); color: white;
+            background: var(--brand); color: white;
         }
-        .btn-primary:hover { background: var(--purple-hover); }
-        .btn-outline {
-            background: transparent; color: var(--purple);
-            border: 1px solid var(--purple-light);
+        .btn-primary:hover { background: var(--brand-hover); }
+        .btn-ghost {
+            background: rgba(255,255,255,0.03);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
         }
-        .btn-outline:hover { background: rgba(83,58,253,0.04); }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.06);
+            color: var(--text);
+        }
 
-        /* Stats bar */
-        .stats-bar {
-            padding: 40px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+        /* Stats */
+        .stats {
+            padding: 60px 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
         }
         .stats-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
             text-align: center;
         }
         .stat h3 {
-            font-size: 32px; font-weight: 300; line-height: 1.1;
-            letter-spacing: -0.64px;
-            color: var(--purple);
-            font-feature-settings: "ss01";
+            font-size: 40px; font-weight: 500;
+            letter-spacing: -0.88px;
+            color: var(--accent);
         }
         .stat p {
-            font-size: 14px; font-weight: 400; color: var(--slate);
+            font-size: 14px; font-weight: 500; color: var(--text-tertiary);
             margin-top: 4px;
-            font-feature-settings: "ss01";
         }
 
-        /* Pain section */
+        /* Pain */
         .pain {
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
         }
         .pain h2 {
-            font-size: 32px; font-weight: 300; line-height: 1.1;
-            letter-spacing: -0.64px;
-            color: var(--navy);
-            font-feature-settings: "ss01";
+            font-size: 32px; font-weight: 400;
+            letter-spacing: -0.704px;
+            color: var(--text);
             margin-bottom: 16px;
         }
         .pain > p {
-            font-size: 16px; font-weight: 300; color: var(--slate);
-            max-width: 600px; margin: 0 auto 40px;
-            font-feature-settings: "ss01";
+            font-size: 16px; font-weight: 400;
+            color: var(--text-tertiary);
+            max-width: 550px;
+            margin: 0 auto 50px;
         }
         .pain-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-            max-width: 800px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 750px;
+            margin: 0 auto;
         }
         .pain-card {
-            padding: 24px; border-radius: 4px;
+            background: rgba(255,255,255,0.02);
             border: 1px solid var(--border);
-            text-align: center;
+            border-radius: 8px;
+            padding: 32px 20px;
         }
         .pain-card h4 {
-            font-size: 32px; font-weight: 300; color: var(--ruby);
+            font-size: 28px; font-weight: 500;
+            letter-spacing: -0.5px;
+            color: var(--text);
             margin-bottom: 8px;
-            font-feature-settings: "ss01";
         }
         .pain-card p {
-            font-size: 14px; font-weight: 400; color: var(--slate);
-            font-feature-settings: "ss01";
+            font-size: 13px; font-weight: 500;
+            color: var(--text-tertiary);
+            line-height: 1.5;
         }
 
         /* Products */
         .products {
-            padding: 80px 0;
+            padding: 100px 0;
+            background: var(--surface);
         }
         .products h2 {
-            font-size: 32px; font-weight: 300; line-height: 1.1;
-            letter-spacing: -0.64px;
-            color: var(--navy);
+            font-size: 32px; font-weight: 400;
+            letter-spacing: -0.704px;
             text-align: center;
-            margin-bottom: 40px;
-            font-feature-settings: "ss01";
+            margin-bottom: 50px;
         }
         .product-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
         }
         .product-card {
+            background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 32px;
+            border-radius: 10px;
+            padding: 32px 28px;
             text-align: center;
             transition: all 0.2s;
-            background: var(--bg);
             position: relative;
         }
         .product-card:hover {
-            box-shadow: rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;
+            border-color: rgba(255,255,255,0.12);
+            background: #1e1f20;
         }
         .product-card.featured {
-            border: 1px solid var(--purple-light);
+            border-color: rgba(94,106,210,0.3);
         }
-        .product-card.featured .badge {
+        .product-card.featured:hover {
+            border-color: rgba(94,106,210,0.5);
+        }
+        .badge {
             position: absolute; top: -12px; left: 50%;
             transform: translateX(-50%);
-            background: var(--purple); color: white;
-            font-size: 10px; font-weight: 400;
-            padding: 4px 10px; border-radius: 4px;
-            text-transform: uppercase; letter-spacing: 0.5px;
-            font-feature-settings: "ss01";
+            background: var(--brand);
+            color: white;
+            font-size: 11px; font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
         }
         .product-card h3 {
-            font-size: 22px; font-weight: 300;
-            letter-spacing: -0.22px;
-            color: var(--navy);
-            margin-bottom: 12px;
-            font-feature-settings: "ss01";
+            font-size: 18px; font-weight: 500;
+            color: var(--text);
+            margin-bottom: 16px;
         }
-        .product-card .price {
-            font-size: 36px; font-weight: 300; color: var(--navy);
-            margin-bottom: 20px;
-            font-feature-settings: "ss01";
-        }
-        .product-card ul {
-            list-style: none; text-align: left;
+        .price {
+            font-size: 44px; font-weight: 500;
+            letter-spacing: -0.8px;
+            color: var(--text);
             margin-bottom: 24px;
         }
-        .product-card ul li {
-            font-size: 14px; font-weight: 400; color: var(--slate);
-            padding: 5px 0;
-            font-feature-settings: "ss01";
+        .price span {
+            font-size: 18px; font-weight: 400;
+            color: var(--text-tertiary);
+            letter-spacing: 0;
         }
-        .product-card ul li::before { content: "✓ "; color: var(--green); font-weight: 500; }
+        .product-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 28px;
+        }
+        .product-card ul li {
+            font-size: 14px; font-weight: 400;
+            color: var(--text-tertiary);
+            padding: 6px 0;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .product-card ul li::before {
+            content: "●";
+            color: var(--success);
+            font-size: 8px;
+        }
+        .product-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
 
-        /* Templates preview */
+        /* Preview */
         .preview {
-            padding: 80px 0;
-            background: var(--dark);
-            color: white;
+            padding: 100px 0;
         }
         .preview h2 {
-            font-size: 32px; font-weight: 300; line-height: 1.1;
-            letter-spacing: -0.64px;
-            font-feature-settings: "ss01";
+            font-size: 32px; font-weight: 400;
+            letter-spacing: -0.704px;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
-        .template-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
         }
-        .template-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 6px;
-            padding: 24px;
+        .preview-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 28px;
         }
-        .template-card h4 {
-            font-size: 14px; font-weight: 400; color: var(--magenta);
-            margin-bottom: 12px;
-            font-feature-settings: "ss01";
+        .preview-card .label {
+            font-size: 12px; font-weight: 500; color: var(--accent);
+            text-transform: uppercase; letter-spacing: 0.8px;
+            margin-bottom: 14px;
         }
-        .template-card .quote {
-            font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.6);
-            line-height: 1.5;
-            margin-bottom: 12px;
+        .preview-card .quote {
+            font-size: 14px; font-weight: 400; color: var(--text-tertiary);
+            line-height: 1.6;
+            margin-bottom: 16px;
             font-style: italic;
-            font-feature-settings: "ss01";
         }
-        .template-card .reply {
-            font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.8);
-            line-height: 1.5;
-            padding: 12px; background: rgba(255,255,255,0.05);
-            border-radius: 4px;
-            font-feature-settings: "ss01";
+        .preview-card .reply {
+            font-size: 13px; font-weight: 400; color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 14px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
         }
 
         /* FAQ */
         .faq {
-            padding: 80px 0;
+            padding: 100px 0;
+            background: var(--surface);
         }
         .faq h2 {
-            font-size: 32px; font-weight: 300; line-height: 1.1;
-            letter-spacing: -0.64px;
-            color: var(--navy);
+            font-size: 32px; font-weight: 400;
+            letter-spacing: -0.704px;
             text-align: center;
-            margin-bottom: 40px;
-            font-feature-settings: "ss01";
+            margin-bottom: 50px;
         }
         .faq-grid {
-            max-width: 700px; margin: 0 auto;
+            max-width: 680px;
+            margin: 0 auto;
         }
         .faq-item {
             padding: 20px 0;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-subtle);
         }
         .faq-item:last-child { border: none; }
         .faq-item h4 {
-            font-size: 16px; font-weight: 400; color: var(--navy);
+            font-size: 15px; font-weight: 500;
+            color: var(--text);
             margin-bottom: 4px;
-            font-feature-settings: "ss01";
         }
         .faq-item p {
-            font-size: 14px; font-weight: 300; color: var(--slate);
-            font-feature-settings: "ss01";
+            font-size: 14px; font-weight: 400;
+            color: var(--text-tertiary);
+            line-height: 1.5;
         }
 
         /* CTA */
         .cta {
-            padding: 80px 0;
-            background: var(--dark);
-            color: white;
+            padding: 100px 0;
             text-align: center;
+            position: relative;
+        }
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 600px; height: 400px;
+            background: radial-gradient(ellipse, rgba(94,106,210,0.06) 0%, transparent 70%);
+            pointer-events: none;
         }
         .cta h2 {
-            font-size: 32px; font-weight: 300; line-height: 1.1;
-            letter-spacing: -0.64px;
-            margin-bottom: 16px;
+            font-size: 40px; font-weight: 500;
+            letter-spacing: -0.88px;
+            margin-bottom: 12px;
+            position: relative;
         }
         .cta p {
-            font-size: 16px; font-weight: 300;
-            opacity: 0.7;
-            margin-bottom: 28px;
+            font-size: 16px; font-weight: 400;
+            color: var(--text-tertiary);
+            margin-bottom: 32px;
+            position: relative;
+        }
+        .cta .btn {
+            padding: 14px 32px;
+            font-size: 16px;
+            position: relative;
         }
 
         /* Footer */
         footer {
-            padding: 24px 0;
+            padding: 32px 0;
             text-align: center;
-            font-size: 12px; font-weight: 300; color: var(--slate);
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--border-subtle);
+        }
+        footer p {
+            font-size: 12px; font-weight: 400;
+            color: var(--text-muted);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; letter-spacing: -0.64px; }
-            .product-grid, .stats-grid, .pain-grid, .template-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+            .hero h1 { font-size: 36px; letter-spacing: -0.7px; }
+            .product-grid, .stats-grid, .pain-grid, .preview-grid { grid-template-columns: 1fr; }
+            .nav-links a:not(.nav-cta) { display: none; }
+            .product-card.featured { order: -1; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Nav -->
     <nav>
         <div class="container">
             <div class="logo">
@@ -383,31 +437,34 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">● Used by 2,000+ businesses</div>
-            <h1>Stop losing customers to bad reviews</h1>
-            <p>One bad review costs 30%–50% of potential customers. Our 50+ proven response templates work on Google, Yelp, Amazon, Trustpilot — any platform.</p>
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Used by 2,000+ businesses
+            </div>
+            <h1>Stop losing customers<br>to <span class="highlight">bad reviews</span></h1>
+            <p>One bad review costs you 30%–50% of your potential customers. Our 50+ proven response templates work on Google, Yelp, Amazon, Trustpilot — any platform.</p>
             <div class="hero-actions">
                 <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary">Get the Kit →</a>
-                <a href="#products" class="btn btn-outline">See pricing</a>
+                <a href="#products" class="btn btn-ghost">See pricing</a>
             </div>
         </div>
     </section>
 
     <!-- Stats -->
-    <section class="stats-bar">
+    <section class="stats">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat">
                     <h3>50+</h3>
-                    <p>Proven Response Templates</p>
+                    <p>Proven response templates</p>
                 </div>
                 <div class="stat">
                     <h3>8</h3>
-                    <p>Situations Covered</p>
+                    <p>Categories for every situation</p>
                 </div>
                 <div class="stat">
-                    <h3>🚀</h3>
-                    <p>Instant Download</p>
+                    <h3>📥</h3>
+                    <p>Instant download</p>
                 </div>
             </div>
         </div>
@@ -421,7 +478,7 @@
             <div class="pain-grid">
                 <div class="pain-card">
                     <h4>94%</h4>
-                    <p>say a bad review convinced them to avoid a business</p>
+                    <p>of consumers say a bad review convinced them to avoid a business</p>
                 </div>
                 <div class="pain-card">
                     <h4>48h</h4>
@@ -447,10 +504,10 @@
                         <li>50+ response templates</li>
                         <li>8 categories for every situation</li>
                         <li>Industry-specific templates</li>
-                        <li>Works for any small business</li>
+                        <li>Works for any platform</li>
                         <li>Instant PDF download</li>
                     </ul>
-                    <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary" style="width:100%;justify-content:center;">Buy $19.9 →</a>
+                    <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary">Buy $19.9 →</a>
                 </div>
                 <div class="product-card featured">
                     <div class="badge">Best value</div>
@@ -458,48 +515,48 @@
                     <div class="price">$29.9</div>
                     <ul>
                         <li>50+ bad review templates</li>
-                        <li>10+ positive review request templates</li>
-                        <li>Bonus: short replies (mobile-friendly)</li>
+                        <li>10+ positive request templates</li>
+                        <li>Bonus: mobile-friendly cheatsheet</li>
                         <li>Bonus: printed card template</li>
                         <li>Get more 5-star reviews too!</li>
                     </ul>
-                    <a href="https://ko-fi.com/s/ba597b2619" class="btn btn-primary" style="width:100%;justify-content:center;">Buy $29.9 →</a>
+                    <a href="https://ko-fi.com/s/ba597b2619" class="btn btn-primary">Buy $29.9 →</a>
                 </div>
                 <div class="product-card">
                     <h3>VIP Custom</h3>
                     <div class="price">$99.9</div>
                     <ul>
                         <li>Send us your bad review link</li>
-                        <li>We write a custom response for you</li>
+                        <li>We write a custom response</li>
                         <li>Personalized to your business</li>
                         <li>48h turnaround</li>
                         <li>Up to 5 reviews</li>
                     </ul>
-                    <a href="mailto:wutian849@gmail.com?subject=VIP%20Review%20Response%20Request" class="btn btn-outline" style="width:100%;justify-content:center;">Contact →</a>
+                    <a href="mailto:wutian849@gmail.com?subject=VIP%20Review%20Response%20Request" class="btn btn-ghost">Contact →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Template preview -->
+    <!-- Preview -->
     <section class="preview">
         <div class="container">
             <h2>Real templates from the kit</h2>
-            <div class="template-grid">
-                <div class="template-card">
-                    <h4>😡 Legitimate complaint</h4>
-                    <div class="quote">"Worst service ever. Waited an hour and nobody even apologized."</div>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <div class="label">😡 Legitimate complaint</div>
+                    <div class="quote">"Worst service ever. Waited an hour and nobody apologized."</div>
                     <div class="reply">"Hi [Name], you're right — that wait was unacceptable. I've addressed this with my team. Please email me so I can make it right."</div>
                 </div>
-                <div class="template-card">
-                    <h4>🤥 Fake / competitor review</h4>
+                <div class="preview-card">
+                    <div class="label">🤥 Fake review</div>
                     <div class="quote">"Terrible. Don't go here." (no specifics)</div>
-                    <div class="reply">"Hi [Name], I can't find any record of your visit. Please email [email] with more details so we can investigate."</div>
+                    <div class="reply">"Hi [Name], I can't find any record of your visit. Please email me with more details so we can investigate."</div>
                 </div>
-                <div class="template-card">
-                    <h4>💥 Emotional customer</h4>
+                <div class="preview-card">
+                    <div class="label">💥 Angry customer</div>
                     <div class="quote">"THIS PLACE IS A SCAM!!! STAY AWAY!!!!!"</div>
-                    <div class="reply">"Hi [Name], I want to help. Please email me with specifics — I'll personally look into this and get back to you within 24 hours."</div>
+                    <div class="reply">"Hi [Name], I want to help. Please email me with specifics — I'll personally look into this within 24 hours."</div>
                 </div>
             </div>
         </div>
@@ -520,11 +577,11 @@
                 </div>
                 <div class="faq-item">
                     <h4>What format is it in?</h4>
-                    <p>PDF and Markdown — editable and easy to customize.</p>
+                    <p>PDF and Markdown — editable and easy to customize for your business.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Can I use these for multiple businesses?</h4>
-                    <p>Absolutely. Buy once, use for all your businesses. No restrictions.</p>
+                    <p>Absolutely. Buy once, use for all your businesses without restrictions.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Do you offer refunds?</h4>
@@ -537,9 +594,9 @@
     <!-- CTA -->
     <section class="cta">
         <div class="container">
-            <h2>Don't let one bad review cost you thousands</h2>
+            <h2>Don't let one bad review<br>cost you thousands</h2>
             <p>2,000+ business owners already have their rescue kit.</p>
-            <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary" style="font-size:18px;padding:14px 36px;">Get the Kit →</a>
+            <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary">Get the Kit →</a>
         </div>
     </section>
 
