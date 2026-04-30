@@ -1,0 +1,38 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#e94560"/>
+            <stop offset="100%" style="stop-color:#ff6b6b"/>
+        </linearGradient>
+    </defs>
+    <!-- Background -->
+    <rect width="800" height="800" fill="url(#bg)"/>
+    <!-- Decorative circles -->
+    <circle cx="700" cy="100" r="150" fill="#e94560" opacity="0.08"/>
+    <circle cx="100" cy="700" r="200" fill="#e94560" opacity="0.05"/>
+    <!-- Shield icon -->
+    <path d="M400 120 L600 200 L600 400 C600 550 400 650 400 650 C400 650 200 550 200 400 L200 200 Z" 
+          fill="none" stroke="url(#accent)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M400 160 L560 225 L560 400 C560 525 400 610 400 610 C400 610 240 525 240 400 L240 225 Z" 
+          fill="#e94560" opacity="0.15"/>
+    <!-- Checkmark inside shield -->
+    <polyline points="340,380 380,430 460,340" fill="none" stroke="#e94560" stroke-width="8" 
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Stars -->
+    <text x="260" y="260" font-size="24" fill="#ffd700" opacity="0.6">★</text>
+    <text x="510" y="250" font-size="20" fill="#ffd700" opacity="0.4">★</text>
+    <text x="340" y="540" font-size="18" fill="#ffd700" opacity="0.3">★</text>
+    
+    <!-- Main title -->
+    <text x="400" y="680" font-family="Arial, sans-serif" font-size="42" font-weight="bold" 
+          fill="white" text-anchor="middle" letter-spacing="2">GOOGLE REVIEWS</text>
+    <text x="400" y="725" font-family="Arial, sans-serif" font-size="52" font-weight="bold" 
+          fill="url(#accent)" text-anchor="middle" letter-spacing="3">RESCUE KIT</text>
+    <!-- Subtitle -->
+    <text x="400" y="765" font-family="Arial, sans-serif" font-size="18" 
+          fill="#b0b0b0" text-anchor="middle" letter-spacing="1">50+ Bad Review Response Templates</text>
+</svg>

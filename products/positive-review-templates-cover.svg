@@ -1,0 +1,46 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0f3460;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ffd700"/>
+            <stop offset="100%" style="stop-color:#ffaa00"/>
+        </linearGradient>
+    </defs>
+    <rect width="800" height="800" fill="url(#bg)"/>
+    
+    <!-- Badge glowing -->
+    <circle cx="400" cy="220" r="120" fill="#ffd700" opacity="0.06"/>
+    <circle cx="400" cy="220" r="90" fill="#ffd700" opacity="0.1"/>
+    
+    <!-- 5 stars -->
+    <circle cx="400" cy="220" r="75" fill="#ffd700" opacity="0.15" stroke="#ffd700" stroke-width="2"/>
+    <text x="400" y="225" font-family="Arial, sans-serif" font-size="24" fill="#ffd700" text-anchor="middle">★★★★★</text>
+    <text x="400" y="255" font-family="Arial, sans-serif" font-size="14" fill="#ffd700" text-anchor="middle" opacity="0.7">5-STAR REVIEWS</text>
+    
+    <!-- Main title -->
+    <text x="400" y="400" font-family="Arial, sans-serif" font-size="38" font-weight="bold" 
+          fill="white" text-anchor="middle" letter-spacing="2">GET MORE</text>
+    <text x="400" y="455" font-family="Arial, sans-serif" font-size="48" font-weight="bold" 
+          fill="url(#gold)" text-anchor="middle" letter-spacing="3">GOOGLE REVIEWS</text>
+    
+    <!-- Subtitle -->
+    <text x="400" y="510" font-family="Arial, sans-serif" font-size="18" 
+          fill="#b0b0b0" text-anchor="middle">10 Proven Templates to Ask Happy Customers</text>
+    
+    <!-- Divider -->
+    <line x1="250" y1="550" x2="550" y2="550" stroke="#ffd700" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Bullet points -->
+    <text x="400" y="590" font-family="Arial, sans-serif" font-size="15" fill="#b0b0b0" text-anchor="middle">📧 Email Templates</text>
+    <text x="400" y="620" font-family="Arial, sans-serif" font-size="15" fill="#b0b0b0" text-anchor="middle">💬 SMS Scripts</text>
+    <text x="400" y="650" font-family="Arial, sans-serif" font-size="15" fill="#b0b0b0" text-anchor="middle">🏪 In-Person Scripts</text>
+    <text x="400" y="680" font-family="Arial, sans-serif" font-size="15" fill="#b0b0b0" text-anchor="middle">📄 Receipt & Card Designs</text>
+    
+    <!-- Price tag -->
+    <rect x="300" y="720" width="200" height="40" rx="20" fill="none" stroke="#ffd700" stroke-width="1.5" opacity="0.5"/>
+    <text x="400" y="746" font-family="Arial, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#gold)" text-anchor="middle">Ultimate Bundle $29</text>
+</svg>
