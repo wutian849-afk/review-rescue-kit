@@ -3,103 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Rescue Kit — Save Your Business From Bad Reviews</title>
-    <meta name="description" content="50+ proven response templates for Google, Yelp, Amazon reviews. Save your reputation. Get more 5-star reviews. Instant download.">
+    <title>Review Rescue Kit — Protect Your Reputation</title>
+    <meta name="description" content="50+ proven response templates for Google, Yelp, Amazon reviews. Save your business from bad reviews. Instant download.">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --purple: #533afd;
+            --purple-hover: #4434d4;
+            --purple-light: #b9b9f9;
+            --navy: #061b31;
+            --slate: #64748d;
+            --border: #e5edf5;
+            --bg: #ffffff;
+            --dark: #1c1e54;
+            --ruby: #ea2261;
+            --magenta: #f96bee;
+            --green: #15be53;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        body {
+            font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 300;
+            color: var(--navy);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+        /* Navigation */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        nav .container {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 16px; padding-bottom: 16px;
+        }
+        .logo {
+            font-size: 20px; font-weight: 400; color: var(--navy);
+            font-feature-settings: "ss01";
+            display: flex; align-items: center; gap: 10px;
+        }
+        .logo-icon {
+            width: 32px; height: 32px; background: var(--purple);
+            border-radius: 6px; display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 14px; font-weight: 600;
+        }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-links a {
+            font-size: 14px; font-weight: 400; color: var(--navy);
+            text-decoration: none; font-feature-settings: "ss01";
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--purple); }
+        .nav-cta {
+            background: var(--purple); color: white !important;
+            padding: 8px 16px; border-radius: 4px;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--purple-hover) !important; }
 
         /* Hero */
-        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 80px 0; text-align: center; }
-        .hero h1 { font-size: 2.8em; margin-bottom: 15px; }
-        .hero p { font-size: 1.2em; opacity: 0.9; max-width: 700px; margin: 0 auto 30px; }
-        .hero .badge { display: inline-block; background: #e94560; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9em; margin-bottom: 20px; }
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px; right: -200px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(234,34,97,0.06) 0%, rgba(249,107,238,0.04) 50%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -150px; left: -150px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(83,58,253,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(21,190,83,0.15);
+            color: #108c3d;
+            font-size: 11px; font-weight: 400;
+            padding: 4px 10px; border-radius: 4px;
+            border: 1px solid rgba(21,190,83,0.3);
+            margin-bottom: 24px;
+            font-feature-settings: "ss01";
+        }
+        .hero h1 {
+            font-size: 48px; font-weight: 300; line-height: 1.15;
+            letter-spacing: -0.96px;
+            color: var(--navy);
+            font-feature-settings: "ss01";
+            max-width: 800px; margin: 0 auto 20px;
+            position: relative;
+        }
+        .hero p {
+            font-size: 18px; font-weight: 300; line-height: 1.4;
+            color: var(--slate);
+            font-feature-settings: "ss01";
+            max-width: 650px; margin: 0 auto 36px;
+            position: relative;
+        }
+        .hero-actions { display: flex; gap: 12px; justify-content: center; position: relative; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: 'Source Sans 3', system-ui, sans-serif;
+            font-size: 16px; font-weight: 400; line-height: 1;
+            padding: 10px 20px; border-radius: 4px;
+            text-decoration: none; cursor: pointer;
+            font-feature-settings: "ss01";
+            transition: all 0.2s;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--purple); color: white;
+        }
+        .btn-primary:hover { background: var(--purple-hover); }
+        .btn-outline {
+            background: transparent; color: var(--purple);
+            border: 1px solid var(--purple-light);
+        }
+        .btn-outline:hover { background: rgba(83,58,253,0.04); }
 
-        /* Social Proof */
-        .social-proof { background: #f8f9fa; padding: 40px 0; text-align: center; }
-        .social-proof .stats { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
-        .social-proof .stat { text-align: center; }
-        .social-proof .stat h3 { font-size: 2em; color: #e94560; }
-        .social-proof .stat p { font-size: 0.9em; color: #666; }
+        /* Stats bar */
+        .stats-bar {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            text-align: center;
+        }
+        .stat h3 {
+            font-size: 32px; font-weight: 300; line-height: 1.1;
+            letter-spacing: -0.64px;
+            color: var(--purple);
+            font-feature-settings: "ss01";
+        }
+        .stat p {
+            font-size: 14px; font-weight: 400; color: var(--slate);
+            margin-top: 4px;
+            font-feature-settings: "ss01";
+        }
 
-        /* Pain Point */
-        .pain { padding: 60px 0; text-align: center; background: white; }
-        .pain h2 { font-size: 2em; margin-bottom: 20px; }
-        .pain .stats-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 40px auto; }
-        .pain .stat-item { background: #fff5f5; padding: 25px; border-radius: 10px; border: 1px solid #ffd7d7; }
-        .pain .stat-item h4 { color: #e94560; font-size: 1.8em; }
-        .pain .stat-item p { font-size: 0.95em; color: #555; }
+        /* Pain section */
+        .pain {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .pain h2 {
+            font-size: 32px; font-weight: 300; line-height: 1.1;
+            letter-spacing: -0.64px;
+            color: var(--navy);
+            font-feature-settings: "ss01";
+            margin-bottom: 16px;
+        }
+        .pain > p {
+            font-size: 16px; font-weight: 300; color: var(--slate);
+            max-width: 600px; margin: 0 auto 40px;
+            font-feature-settings: "ss01";
+        }
+        .pain-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            max-width: 800px; margin: 0 auto;
+        }
+        .pain-card {
+            padding: 24px; border-radius: 4px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .pain-card h4 {
+            font-size: 32px; font-weight: 300; color: var(--ruby);
+            margin-bottom: 8px;
+            font-feature-settings: "ss01";
+        }
+        .pain-card p {
+            font-size: 14px; font-weight: 400; color: var(--slate);
+            font-feature-settings: "ss01";
+        }
 
         /* Products */
-        .products { padding: 80px 0; background: #f8f9fa; }
-        .products h2 { text-align: center; font-size: 2em; margin-bottom: 40px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .product-card { background: white; border-radius: 12px; padding: 35px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); text-align: center; position: relative; transition: transform 0.2s; }
-        .product-card:hover { transform: translateY(-3px); }
-        .product-card.featured { border: 2px solid #e94560; }
-        .product-card.featured .badge { position: absolute; top: -12px; right: 20px; background: #e94560; color: white; padding: 5px 15px; border-radius: 50px; font-size: 0.8em; font-weight: 700; }
-        .product-card h3 { font-size: 1.3em; margin-bottom: 10px; }
-        .product-card .price { font-size: 2.2em; font-weight: 700; color: #1a1a2e; margin: 15px 0; }
-        .product-card .price span { font-size: 0.4em; color: #999; }
-        .product-card ul { text-align: left; list-style: none; margin: 20px 0; }
-        .product-card ul li { padding: 6px 0; font-size: 0.95em; color: #555; }
-        .product-card ul li::before { content: "✓ "; color: #e94560; font-weight: 700; }
-        .btn { display: inline-block; background: #e94560; color: white; padding: 14px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: background 0.2s; }
-        .btn:hover { background: #d63850; }
-        .btn-outline { background: transparent; border: 2px solid #e94560; color: #e94560; }
-        .btn-outline:hover { background: #e94560; color: white; }
+        .products {
+            padding: 80px 0;
+        }
+        .products h2 {
+            font-size: 32px; font-weight: 300; line-height: 1.1;
+            letter-spacing: -0.64px;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 40px;
+            font-feature-settings: "ss01";
+        }
+        .product-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .product-card {
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.2s;
+            background: var(--bg);
+            position: relative;
+        }
+        .product-card:hover {
+            box-shadow: rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px;
+        }
+        .product-card.featured {
+            border: 1px solid var(--purple-light);
+        }
+        .product-card.featured .badge {
+            position: absolute; top: -12px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--purple); color: white;
+            font-size: 10px; font-weight: 400;
+            padding: 4px 10px; border-radius: 4px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            font-feature-settings: "ss01";
+        }
+        .product-card h3 {
+            font-size: 22px; font-weight: 300;
+            letter-spacing: -0.22px;
+            color: var(--navy);
+            margin-bottom: 12px;
+            font-feature-settings: "ss01";
+        }
+        .product-card .price {
+            font-size: 36px; font-weight: 300; color: var(--navy);
+            margin-bottom: 20px;
+            font-feature-settings: "ss01";
+        }
+        .product-card ul {
+            list-style: none; text-align: left;
+            margin-bottom: 24px;
+        }
+        .product-card ul li {
+            font-size: 14px; font-weight: 400; color: var(--slate);
+            padding: 5px 0;
+            font-feature-settings: "ss01";
+        }
+        .product-card ul li::before { content: "✓ "; color: var(--green); font-weight: 500; }
 
-        /* Examples */
-        .examples { padding: 80px 0; background: white; }
-        .examples h2 { text-align: center; font-size: 2em; margin-bottom: 40px; }
-        .example-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .example-card { background: #f8f9fa; border-radius: 10px; padding: 25px; border-left: 4px solid #e94560; }
-        .example-card h4 { color: #e94560; margin-bottom: 10px; }
-        .example-card p { font-size: 0.95em; color: #444; font-style: italic; }
-        .example-card .response { margin-top: 12px; font-size: 0.9em; color: #666; padding: 10px; background: white; border-radius: 6px; }
+        /* Templates preview */
+        .preview {
+            padding: 80px 0;
+            background: var(--dark);
+            color: white;
+        }
+        .preview h2 {
+            font-size: 32px; font-weight: 300; line-height: 1.1;
+            letter-spacing: -0.64px;
+            font-feature-settings: "ss01";
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .template-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+        }
+        .template-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 24px;
+        }
+        .template-card h4 {
+            font-size: 14px; font-weight: 400; color: var(--magenta);
+            margin-bottom: 12px;
+            font-feature-settings: "ss01";
+        }
+        .template-card .quote {
+            font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.6);
+            line-height: 1.5;
+            margin-bottom: 12px;
+            font-style: italic;
+            font-feature-settings: "ss01";
+        }
+        .template-card .reply {
+            font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.8);
+            line-height: 1.5;
+            padding: 12px; background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            font-feature-settings: "ss01";
+        }
 
         /* FAQ */
-        .faq { padding: 80px 0; background: #f8f9fa; }
-        .faq h2 { text-align: center; font-size: 2em; margin-bottom: 40px; }
-        .faq-grid { max-width: 700px; margin: 0 auto; }
-        .faq-item { background: white; padding: 20px 25px; border-radius: 8px; margin-bottom: 12px; }
-        .faq-item h4 { margin-bottom: 5px; font-size: 1.05em; }
-        .faq-item p { font-size: 0.95em; color: #666; }
+        .faq {
+            padding: 80px 0;
+        }
+        .faq h2 {
+            font-size: 32px; font-weight: 300; line-height: 1.1;
+            letter-spacing: -0.64px;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 40px;
+            font-feature-settings: "ss01";
+        }
+        .faq-grid {
+            max-width: 700px; margin: 0 auto;
+        }
+        .faq-item {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-item:last-child { border: none; }
+        .faq-item h4 {
+            font-size: 16px; font-weight: 400; color: var(--navy);
+            margin-bottom: 4px;
+            font-feature-settings: "ss01";
+        }
+        .faq-item p {
+            font-size: 14px; font-weight: 300; color: var(--slate);
+            font-feature-settings: "ss01";
+        }
 
         /* CTA */
-        .cta { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; text-align: center; padding: 80px 0; }
-        .cta h2 { font-size: 2em; margin-bottom: 15px; }
-        .cta p { opacity: 0.8; margin-bottom: 30px; }
+        .cta {
+            padding: 80px 0;
+            background: var(--dark);
+            color: white;
+            text-align: center;
+        }
+        .cta h2 {
+            font-size: 32px; font-weight: 300; line-height: 1.1;
+            letter-spacing: -0.64px;
+            margin-bottom: 16px;
+        }
+        .cta p {
+            font-size: 16px; font-weight: 300;
+            opacity: 0.7;
+            margin-bottom: 28px;
+        }
 
         /* Footer */
-        footer { background: #1a1a2e; color: #888; text-align: center; padding: 30px 0; font-size: 0.85em; border-top: 1px solid #333; }
+        footer {
+            padding: 24px 0;
+            text-align: center;
+            font-size: 12px; font-weight: 300; color: var(--slate);
+            border-top: 1px solid var(--border);
+        }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2em; }
-            .product-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 32px; letter-spacing: -0.64px; }
+            .product-grid, .stats-grid, .pain-grid, .template-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🛡</div>
+                Review Rescue
+            </div>
+            <div class="nav-links">
+                <a href="#products">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://ko-fi.com/s/56ee265dca" class="nav-cta">Get the Kit</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="badge">🔥 Used by 2,000+ Small Businesses</div>
-            <h1>Stop Losing Customers to Bad Online Reviews</h1>
-            <p>One bad review costs you 30% to 50% of potential customers. Works for Google, Yelp, Amazon, Trustpilot — any review platform. Our 50+ proven response templates turn disasters into opportunities and save your reputation.</p>
-            <a href="https://ko-fi.com/s/56ee265dca" class="btn">Get the Kit →</a>
+            <div class="hero-badge">● Used by 2,000+ businesses</div>
+            <h1>Stop losing customers to bad reviews</h1>
+            <p>One bad review costs 30%–50% of potential customers. Our 50+ proven response templates work on Google, Yelp, Amazon, Trustpilot — any platform.</p>
+            <div class="hero-actions">
+                <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary">Get the Kit →</a>
+                <a href="#products" class="btn btn-outline">See pricing</a>
+            </div>
         </div>
     </section>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
+    <!-- Stats -->
+    <section class="stats-bar">
         <div class="container">
-            <div class="stats">
+            <div class="stats-grid">
                 <div class="stat">
                     <h3>50+</h3>
-                    <p>Proven Templates</p>
+                    <p>Proven Response Templates</p>
                 </div>
                 <div class="stat">
                     <h3>8</h3>
@@ -113,22 +413,22 @@
         </div>
     </section>
 
-    <!-- Pain Point -->
+    <!-- Pain -->
     <section class="pain">
         <div class="container">
-            <h2>Your Reputation Is Fragile</h2>
-            <p>90% of consumers read reviews before visiting a business. A single 1-star review can cost you 30-50% of potential customers — on Google, Yelp, Amazon, or any platform.</p>
-            <div class="stats-box">
-                <div class="stat-item">
+            <h2>Your reputation is fragile</h2>
+            <p>90% of consumers read reviews before visiting a business. A single bad review can destroy months of hard work.</p>
+            <div class="pain-grid">
+                <div class="pain-card">
                     <h4>94%</h4>
-                    <p>of consumers say a bad review convinced them to avoid a business</p>
+                    <p>say a bad review convinced them to avoid a business</p>
                 </div>
-                <div class="stat-item">
+                <div class="pain-card">
                     <h4>48h</h4>
-                    <p>max response time — businesses who respond faster win</p>
+                    <p>max response time — businesses that reply faster win</p>
                 </div>
-                <div class="stat-item">
-                    <h4>3x</h4>
+                <div class="pain-card">
+                    <h4>3×</h4>
                     <p>more likely to choose a business that replies to reviews</p>
                 </div>
             </div>
@@ -136,13 +436,13 @@
     </section>
 
     <!-- Products -->
-    <section class="products" id="buy">
+    <section class="products" id="products">
         <div class="container">
-            <h2>Choose Your Rescue Kit</h2>
+            <h2>Choose your rescue kit</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <h3>Bad Review Templates</h3>
-                    <div class="price">$19</div>
+                    <div class="price">$19.9</div>
                     <ul>
                         <li>50+ response templates</li>
                         <li>8 categories for every situation</li>
@@ -150,12 +450,12 @@
                         <li>Works for any small business</li>
                         <li>Instant PDF download</li>
                     </ul>
-                    <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-outline">Buy $19 →</a>
+                    <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary" style="width:100%;justify-content:center;">Buy $19.9 →</a>
                 </div>
                 <div class="product-card featured">
-                    <div class="badge">BEST VALUE</div>
-                    <h3>Ultimate Bundle 🔥</h3>
-                    <div class="price">$29</div>
+                    <div class="badge">Best value</div>
+                    <h3>Ultimate Bundle</h3>
+                    <div class="price">$29.9</div>
                     <ul>
                         <li>50+ bad review templates</li>
                         <li>10+ positive review request templates</li>
@@ -163,11 +463,11 @@
                         <li>Bonus: printed card template</li>
                         <li>Get more 5-star reviews too!</li>
                     </ul>
-                    <a href="https://ko-fi.com/s/ba597b2619" class="btn">Buy $29 →</a>
+                    <a href="https://ko-fi.com/s/ba597b2619" class="btn btn-primary" style="width:100%;justify-content:center;">Buy $29.9 →</a>
                 </div>
                 <div class="product-card">
-                    <h3>VIP Custom Response</h3>
-                    <div class="price">$99</div>
+                    <h3>VIP Custom</h3>
+                    <div class="price">$99.9</div>
                     <ul>
                         <li>Send us your bad review link</li>
                         <li>We write a custom response for you</li>
@@ -175,67 +475,60 @@
                         <li>48h turnaround</li>
                         <li>Up to 5 reviews</li>
                     </ul>
-                    <a href="mailto:wutian849@gmail.com?subject=VIP%20Review%20Response%20Request" class="btn btn-outline">Contact →</a>
+                    <a href="mailto:wutian849@gmail.com?subject=VIP%20Review%20Response%20Request" class="btn btn-outline" style="width:100%;justify-content:center;">Contact →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Examples -->
-    <section class="examples">
+    <!-- Template preview -->
+    <section class="preview">
         <div class="container">
-            <h2>Real Templates From the Kit</h2>
-            <div class="example-grid">
-                <div class="example-card">
-                    <h4>😡 Legitimate Complaint</h4>
-                    <p>"Worst service ever. Waited an hour and nobody even apologized."</p>
-                    <div class="response">"Hi [Name], you're absolutely right — that wait was unacceptable. I've addressed this with my team and implemented changes. Please email me at [email] so I can make it right personally."</div>
+            <h2>Real templates from the kit</h2>
+            <div class="template-grid">
+                <div class="template-card">
+                    <h4>😡 Legitimate complaint</h4>
+                    <div class="quote">"Worst service ever. Waited an hour and nobody even apologized."</div>
+                    <div class="reply">"Hi [Name], you're right — that wait was unacceptable. I've addressed this with my team. Please email me so I can make it right."</div>
                 </div>
-                <div class="example-card">
-                    <h4>🤥 Fake/Competitor Review</h4>
-                    <p>"Terrible. Don't go here." (no specifics, new account)</p>
-                    <div class="response">"Hi [Name], I've searched our records and can't find any visit under your name. Could you please email [email] with more details? We take all feedback seriously and want to ensure it reflects genuine experiences."</div>
+                <div class="template-card">
+                    <h4>🤥 Fake / competitor review</h4>
+                    <div class="quote">"Terrible. Don't go here." (no specifics)</div>
+                    <div class="reply">"Hi [Name], I can't find any record of your visit. Please email [email] with more details so we can investigate."</div>
                 </div>
-                <div class="example-card">
-                    <h4>💥 Emotional Customer</h4>
-                    <p>"THIS PLACE IS A SCAM!!! STAY AWAY!!!!!"</p>
-                    <div class="response">"Hi [Name], I can hear your frustration and I want to help. Please email me at [email] with the specifics — I'll personally look into this and get back to you within 24 hours."</div>
+                <div class="template-card">
+                    <h4>💥 Emotional customer</h4>
+                    <div class="quote">"THIS PLACE IS A SCAM!!! STAY AWAY!!!!!"</div>
+                    <div class="reply">"Hi [Name], I want to help. Please email me with specifics — I'll personally look into this and get back to you within 24 hours."</div>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="https://ko-fi.com/s/56ee265dca" class="btn">Get Your Templates →</a>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Frequently asked questions</h2>
             <div class="faq-grid">
                 <div class="faq-item">
                     <h4>Who is this for?</h4>
-                    <p>Any small business owner — restaurants, plumbers, dentists, auto shops, hair salons, contractors, cleaning services, and more.</p>
+                    <p>Any small business owner — restaurants, plumbers, dentists, auto shops, hair salons, contractors, and more.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Is this a one-time purchase?</h4>
-                    <p>Yes! Pay once, download forever. No subscriptions, no hidden fees.</p>
+                    <p>Yes. Pay once, download forever. No subscriptions, no hidden fees.</p>
                 </div>
                 <div class="faq-item">
                     <h4>What format is it in?</h4>
-                    <p>PDF and Markdown format. Editable — copy/paste and customize.</p>
+                    <p>PDF and Markdown — editable and easy to customize.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Can I use these for multiple businesses?</h4>
                     <p>Absolutely. Buy once, use for all your businesses. No restrictions.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>How do I get the templates?</h4>
-                    <p>Instant download after purchase. Link sent to your email immediately.</p>
-                </div>
-                <div class="faq-item">
                     <h4>Do you offer refunds?</h4>
-                    <p>100% satisfaction guaranteed. If the templates don't help, email us within 30 days for a full refund.</p>
+                    <p>100% satisfaction guaranteed. Email us within 30 days for a full refund.</p>
                 </div>
             </div>
         </div>
@@ -244,9 +537,9 @@
     <!-- CTA -->
     <section class="cta">
         <div class="container">
-            <h2>Don't Let One Bad Review Cost You Thousands</h2>
-            <p>2,000+ business owners already have their rescue kit. Get yours now.</p>
-            <a href="https://ko-fi.com/s/56ee265dca" class="btn">Download Now →</a>
+            <h2>Don't let one bad review cost you thousands</h2>
+            <p>2,000+ business owners already have their rescue kit.</p>
+            <a href="https://ko-fi.com/s/56ee265dca" class="btn btn-primary" style="font-size:18px;padding:14px 36px;">Get the Kit →</a>
         </div>
     </section>
 
